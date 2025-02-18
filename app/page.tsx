@@ -1,3 +1,4 @@
+import Counter from "./componentes/counter/Counter";
 import Inicio from "./inicio/page";
 
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
     <>
       <section className="container">
         <Inicio/>
+        <Counter />
       </section>
     </>
   );
