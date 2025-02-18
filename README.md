@@ -39,3 +39,12 @@
 - Redux Observable
 - Redux Persist
 
+_______________________________________________________________
+## instalação
+
+- NextJs: `npx create-next-app@latest`
+- Redux: `npm install @reduxjs/toolkit react-redux`
+- React Icons: `npm install react-icons`
+
+## Artigo que fala sobre a comparação de vários gerenciadores de estado global:
+https://medium.com/@AlexanderObregon/comparing-redux-with-alternative-state-management-solutions-mobx-context-api-and-recoil-7694091dd87c 

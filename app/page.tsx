@@ -1,8 +1,10 @@
+import Inicio from "./inicio/page";
+
 export default function Home() {
   return (
     <>
       <section className="container">
-        <p>Home</p>
+        <Inicio/>
       </section>
     </>
   );
