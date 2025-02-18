@@ -1,2 +1,41 @@
-# redux-class-15
-Repositório de aula
+# Redux Class 15
+## Tópicos de Aula
+
+- O que é Redux?
+- Por que usar o Redux?
+- Quando usar o Redux?
+- O que é Flux?
+- Características da arquitetura Flux
+- One-Way Data Binding
+- Prop Drilling
+- Entendendo os conceitos do Redux
+- Princípios do Redux
+- Redux Thunk
+- Redux Tool Kit (RTK)
+- createSlice
+- createAction
+- createReducer
+- configureStore 
+- Immer
+- Dispatch 
+- Immutability Helpers
+- Redux DevTools
+- Redux Toolkit Query
+- Etapas de fluxo
+   - Slice da consulta
+   - Definição de recursos
+   - Recursos na aplicação
+- Re-fetching
+- Redux Persist
+- HashRouter do Router
+- Rotas dinâmicas
+- Memo
+- Lazy
+- Redux Saga
+- O que é?
+- Quais as características?
+- Estrutura
+- Funcionamento
+- Redux Observable
+- Redux Persist
+
