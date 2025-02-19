@@ -136,4 +136,47 @@ O RTK usa o combineReducers internamente para combinar todos os seus reducers em
 Esse reducer raiz é então usado para criar a store do Redux. E usamos o useSelector para acessar as partes do estado global.
 
 __________________________________________________
+# Componente Image no NextJs
 
+O componente Image do Next.js é uma ferramenta relevante para otimizar imagens em aplicações web, oferecendo recursos como carregamento otimizado, redimensionamento automático e suporte a formatos modernos como WebP.
+
+1. **Pasta Public e Resoluções de Imagem**
+- Pasta Public: A pasta public no NextJs é o local ideal para armazenar imagens que não precisam ser processadas pelo Next.js, como ícones, logotipos e imagens estáticas. O componente Image pode acessar imagens diretamente da pasta public através da propriedade src.
+- Resoluções de Imagem: Ao usar o componente Image, é recomendado fornecer imagens em diferentes resoluções para atender diversos dispositivos e tamanhos de tela. O NextJs otimiza automaticamente as imagens, servindo a versão mais adequada para cada situação.
+
+2. **Deploy no Vercel**
+- O Vercel, plataforma de deploy otimizada para NextJs, oferece integração perfeita com o componente Image. Ao realizar o deploy no Vercel, as imagens são automaticamente otimizadas e armazenadas em CDN, garantindo carregamento rápido e eficiente para os usuários.
+
+3. **Propriedades de Otimização**
+- O Image oferece diversas propriedades para otimizar o carregamento e exibição de imagens:
+   - `src`: Caminho para a imagem.
+   - `alt`: Texto alternativo para a imagem, importante para acessibilidade e SEO.
+   - `width e height`: Dimensões da imagem, ajudam a evitar mudanças de layout durante o carregamento.
+   - `layout`: Define como a imagem se comporta em relação ao seu contêiner (intrinsic, fixed, responsive ou fill).
+   - `objectFit`: Define como a imagem se ajusta ao seu contêiner (contain, cover, fill, none ou scale-down).
+   - `quality`: Nível de qualidade da imagem (0-100), permite ajustar o equilíbrio entre qualidade e tamanho do arquivo.
+   - `priority`: Define a prioridade de carregamento da imagem, útil para imagens acima da dobra.
+- Outros recursos:
+   - O NextJs oferece suporte a formatos de imagem modernos como WebP e AVIF, que oferecem melhor compressão e qualidade em comparação com formatos tradicionais como JPEG e PNG.
+   - O componente Image realiza o carregamento lento de imagens (lazy loading) por padrão, o que significa que as imagens só são carregadas quando estão prestes a ser exibidas na tela, melhorando o desempenho da página.
+
+## Qual a relação da pasta `public` e as otimizações de larg images no componente Image?
+### Eis o porquê...
+- **Otimização automática**: O componente Image do NextJs oferece otimizações automáticas de imagem, como redimensionamento, conversão para formatos mais eficientes (WebP) e carregamento lento (lazy loading).
+- **Imagens na pasta public não passam por esse processo de otimização automática!!** Isso significa que, mesmo que você tenha otimizado manualmente as imagens, o NextJs não as otimizará ainda mais durante o build e o deploy.
+- **CDN e cache**: O Vercel, ao fazer o deploy de um projeto NextJs, otimiza imagens e as armazena em uma `Content Delivery Network (CDN)`. CDNs aceleram o carregamento de ativos estáticos, como imagens, distribuindo-os em servidores ao redor do mundo.
+- **Imagens na pasta public não são otimizadas nem enviadas para uma CDN pelo Vercel.** Isso pode resultar em tempos de carregamento mais longos, especialmente para usuários em locais geográficos distantes do servidor de origem.
+- **Controle de versões e cache busting:** O NextJs e o Vercel oferecem recursos de controle de versões e cache busting para imagens otimizadas. Isso garante que os usuários sempre vejam as versões mais recentes das imagens, mesmo que elas tenham sido atualizadas no servidor.
+   - **Imagens na pasta public não se beneficiam desses recursos. Se você atualizar uma imagem na pasta public, os usuários podem continuar vendo a versão antiga em cache até que ele seja limpo manualmente.**
+
+### Quando usar a pasta public
+A pasta public é mais adequada para ativos estáticos que não precisam de otimizações adicionais ou que já foram otimizados manualmente e não serão alterados com frequência, como:
+- Ícones
+- Logotipos
+- Imagens de terceiros que já estão otimizadas
+
+### Recomendação
+Para obter o máximo desempenho e otimização de imagens no projeto NextJs, é legal seguir estas práticas recomendadas:
+- Use o componente Image para todas as imagens que precisam ser otimizadas.
+- **Coloque as imagens que serão otimizadas fora da pasta public, geralmente dentro da pasta pages ou de um diretório assets dentro da pasta src.**
+- Aproveite os recursos de otimização automática, CDN e cache busting oferecidos pelo NextJs e Vercel.
