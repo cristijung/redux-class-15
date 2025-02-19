@@ -138,7 +138,7 @@ Esse reducer raiz é então usado para criar a store do Redux. E usamos o useSel
 __________________________________________________
 # Componente Image no NextJs
 
-O componente Image do Next.js é uma ferramenta relevante para otimizar imagens em aplicações web, oferecendo recursos como carregamento otimizado, redimensionamento automático e suporte a formatos modernos como WebP.
+O componente Image do NextJs é uma ferramenta relevante para otimizar imagens em aplicações web, oferecendo recursos como carregamento otimizado, redimensionamento automático e suporte a formatos modernos como WebP.
 
 1. **Pasta Public e Resoluções de Imagem**
 - Pasta Public: A pasta public no NextJs é o local ideal para armazenar imagens que não precisam ser processadas pelo Next.js, como ícones, logotipos e imagens estáticas. O componente Image pode acessar imagens diretamente da pasta public através da propriedade src.
