@@ -180,3 +180,25 @@ Para obter o máximo desempenho e otimização de imagens no projeto NextJs, é 
 - Use o componente Image para todas as imagens que precisam ser otimizadas.
 - **Coloque as imagens que serão otimizadas fora da pasta public, geralmente dentro da pasta pages ou de um diretório assets dentro da pasta src.**
 - Aproveite os recursos de otimização automática, CDN e cache busting oferecidos pelo NextJs e Vercel.
+
+__________________________________________________________________
+# Redux RTK Query: Uma solução robusta para gerenciamento de dados em React
+
+## O Redux RTK Query (RTK Query) é uma ferramenta poderosa e eficiente para gerenciamento de dados assíncronos em aplicações React. Ele simplifica a busca, armazenamento em cache e atualização de dados, otimizando o fluxo de informações na sua aplicação.
+
+### Vantagens de usar o Redux RTK Query:
+- Menos código boilerplate: O RTK Query reduz drasticamente a necessidade de escrever código repetitivo para buscar, armazenar em cache e atualizar dados.
+- Gerenciamento de cache inteligente: A ferramenta possui um sistema de cache integrado que armazena os dados, evitando requisições desnecessárias e otimizando o desempenho da aplicação.
+- Hooks para React: O RTK Query oferece hooks específicos para React que facilitam a integração com componentes, tornando o código mais legível e manutenível.
+- Tipagem segura: A ferramenta é construída com TypeScript, garantindo a tipagem dos dados e prevenindo erros.
+- Integração com Redux Toolkit: O RTK Query faz parte do Redux Toolkit, aproveitando as funcionalidades e convenções já conhecidas pelos desenvolvedores Redux.
+
+### Como o Redux RTK Query funciona:
+- Definição de endpoints: Você define os endpoints da sua API, especificando a URL, método HTTP e como os dados devem ser transformados.
+- Geração de hooks: O RTK Query gera automaticamente hooks para cada endpoint, que podem ser usados nos seus componentes React para realizar as requisições.
+- Gerenciamento de cache: A ferramenta gerencia o cache automaticamente, armazenando os dados e invalidando-os quando necessário.
+- Atualizações automáticas: O RTK Query oferece recursos para atualizar os dados automaticamente, seja por meio de polling ou WebSockets.
+
+### Docs
+Documentação oficial do Redux RTK Query: https://redux-toolkit.js.org/rtk-query/overview
+Artigo sobre Redux Toolkit Query: https://redux-toolkit.js.org/rtk-query/overview
