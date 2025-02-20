@@ -200,5 +200,21 @@ __________________________________________________________________
 - Atualizações automáticas: O RTK Query oferece recursos para atualizar os dados automaticamente, seja por meio de polling ou WebSockets.
 
 ### Docs
-Documentação oficial do Redux RTK Query: https://redux-toolkit.js.org/rtk-query/overview
-Artigo sobre Redux Toolkit Query: https://redux-toolkit.js.org/rtk-query/overview
+- Documentação oficial do Redux RTK Query: https://redux-toolkit.js.org/rtk-query/overview 
+- Artigo sobre Redux Toolkit Query: https://redux-toolkit.js.org/rtk-query/overview
+
+_______________________________________________________________
+## Middleware
+
+Middleware são funções que interceptam as ações (actions) antes de chegarem ao reducer. Eles oferecem uma maneira poderosa de adicionar funcionalidades extras, como logging, tratamento de efeitos colaterais (como chamadas de API), ou modificar as ações.  No contexto do seu código, o middleware está sendo usado para integrar as APIs
+
+### Por que usar getDefaultMiddleware()?
+
+É fundamental usar getDefaultMiddleware() porque ele garante que você não perca os middlewares essenciais que o Redux Toolkit configura por padrão.  Se você simplesmente criasse um novo array de middlewares sem incluir os padrões, funcionalidades importantes poderiam quebrar.
+
+### Exemplo mais detalhado (conceitual):
+
+Imagine que getDefaultMiddleware() retorna [middleware1, middleware2].  E que catApiDois.middleware é middleware3 e catsApi.middleware é middleware4.... exemplo de como usamos no store desta aplicação:
+
+```middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(catApiDois.middleware, catsApi.middleware),```
